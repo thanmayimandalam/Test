@@ -37,20 +37,28 @@ public class LoanCal {
         double Result = 0;
         boolean isValid = false;
         while(isValid == false){
+
+            System.out.print(prompt);
+
             if(scanner.hasNextDouble()){
                 Result = scanner.nextDouble();
                 if(Result <= min){
                     System.out.println("Error! Number must be greater than 0.0");
-                }else if(Result >= max){
+                }
+                else if(Result >= max){
                     System.out.println("Error! Number must be less than 1000000.0");
-                }else{
+                }
+                else{
                     isValid = true;
                 }
 
-            }else{
+            }
+            else{
                 System.out.println("Error! Invalid decimal value. Try again");
-            }scanner.nextLine();
-        }return Result;
+            }
+            scanner.nextLine();
+        }
+        return Result;
 
 
 
